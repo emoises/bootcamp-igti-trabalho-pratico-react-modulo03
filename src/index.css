@@ -11,3 +11,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1{
+  display: flex;
+  justify-content: center;
+}
+.input-field{
+  display: flex;
+  margin: 50px;
+  justify-content: center;
+}
+
+.validate {
+  display: flex;
+  width: 80%;
+  align-items: center;
+}
+.input-ready{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:  wrap;
+  justify-content: flex-start;
+  height: auto;
+}
+
+#input_base_INSS {
+  border-bottom: 1px solid;
+  border-bottom-color: #000;
+  padding-left: 8px;
+  font-weight: bold ;
+  color: #000000;
+}
+#input_desconto_INSS{
+  border-bottom: 1px solid;
+  border-bottom-color: #e67e22;
+  padding-left: 8px;
+  font-weight: bold ;
+  color: #e67e22;
+}
+#input_base_IRPF{
+  border-bottom: 1px solid;
+  border-bottom-color: #000;
+  font-weight: bold ;
+  color: #000000;
+}
+#input_IRPF{
+  border-bottom: 1px solid;
+  border-bottom-color: #c0392b;
+  font-weight: bold ;
+  color: #c0392b;
+}
+
+#input_salario_liquido{
+  border-bottom: 1px solid;
+  border-bottom-color: #16a085;
+  font-weight: bold ;
+  color: #16a085;
+  
+}
+.label_input_ready{
+  display: flex;
+  margin-left: -10px;
+  margin-top: -30px;
+  font-size: 5%;
+  font-weight: bold;
+  text-decoration-color: #c0392b;
+}
