@@ -1,0 +1,26 @@
+{
+    "A": {
+        "value": 1045,
+        "minValue": 0,
+        "aliquota": 0.075,
+        "maxAlq": 78.375
+    },
+    "B": {
+        "value": 2089.60,
+        "minValue": 1045,
+        "aliquota": 0.09,
+        "maxAlq": 94.014
+    },
+    "C": {
+        "value": 3134.40,
+        "minValue": 2089.60,
+        "aliquota": 0.12,
+        "maxAlq": 125.376
+    },
+    "D": {
+        "value": 6101.06,
+        "minValue": 3134.40,
+        "aliquota": 0.14,
+        "maxAlq": 415.3324
+    }
+}

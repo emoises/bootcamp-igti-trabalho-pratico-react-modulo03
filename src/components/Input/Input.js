@@ -16,7 +16,7 @@ export default class Input extends Component {
                     step="100" 
                     min="1000" 
                     id="icon_prefix" 
-                    className="teste"
+                    className="input_salary"
                     onChange={this.handleChange}
                     />
                     <label htmlFor="icon_prefix">Salário bruto</label>

@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 export default class ProgressBarSalary extends Component {
     render() {
         const { barINSS, barIRPF, barSalLiq } = this.props.barHeight
-        console.log(barINSS)
-        console.log(barIRPF)
-        console.log(barSalLiq)
+   
 
         return (
             <div 

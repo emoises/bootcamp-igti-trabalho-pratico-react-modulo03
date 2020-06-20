@@ -1,0 +1,36 @@
+{
+      "checkInput": false,
+      "barHeight": {
+        "barINSS": "0%",
+        "barIRPF": "0%",
+        "barSalLiq": "100%"
+    },
+      
+      "salaryMath": {
+        "A": {
+          "id": "base_INSS",
+          "name": "Base INSS",
+          "value": ""
+        },
+        "B": {
+          "id": "desconto_INSS",
+          "name": "Desconto INSS",
+          "value": ""
+        },
+        "C": {
+          "id": "base_IRPF",
+          "name": "Base IRPF",
+          "value": ""
+        },
+        "D": {
+          "id": "IRPF",
+          "name": "IRPF",
+          "value": ""
+        },
+        "E": {
+          "id": "salario_liquido",
+          "name": "Salário líquido",
+          "value": ""
+        }
+    }
+}

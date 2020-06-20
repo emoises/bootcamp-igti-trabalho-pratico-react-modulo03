@@ -1,0 +1,32 @@
+{
+    "A": {
+        "minValue": 0.0,
+        "aliquota": 0.0,
+        "maxValue": 1903.98,
+        "parcDedu": 0.00
+    },
+    "B": {
+        "minValue": 1903.98,
+        "aliquota": 0.075,
+        "maxValue": 2826.65,
+        "parcDedu": 142.80
+    },
+    "C": {
+        "minValue": 2826.65,
+        "aliquota": 0.150,
+        "maxValue": 3751.05,
+        "parcDedu": 354.80
+    },
+    "D": {
+        "minValue": 3751.05,
+        "aliquota": 0.225,
+        "maxValue": 4664.05,
+        "parcDedu": 636.13
+    },
+    "E": {
+        "minValue": 4664.05,
+        "aliquota": 0.275,
+        "maxValue": 100000000000000000000.00,
+        "parcDedu": 869.36
+    }
+}

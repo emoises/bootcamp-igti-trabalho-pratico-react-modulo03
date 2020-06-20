@@ -35,7 +35,7 @@ h1{
 }
 
 #input_base_INSS {
-  border-bottom: 1px solid;
+  border-bottom: 1.5px solid;
   border-bottom-color: #000;
   padding-left: 8px;
   font-weight: bold ;
@@ -69,9 +69,7 @@ h1{
   
 }
 .label_input_ready{
-  display: flex;
-  margin-left: -10px;
-  margin-top: -30px;
+  display: flex;  
   font-size: 5%;
   font-weight: bold;
   text-decoration-color: #c0392b;

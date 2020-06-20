@@ -1,64 +1,8 @@
 function formatSalary(value) {
     return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
-const inss = {
-    "A": {
-        value: 1045,
-        minValue: 0,
-        aliquota: 0.075,
-        maxAlq: 78.375,
-    },
-    "B": {
-        value: 2089.60,
-        minValue: 1045,
-        aliquota: 0.09,
-        maxAlq: 94.014,
-    },
-    "C": {
-        value: 3134.40,
-        minValue: 2089.60,
-        aliquota: 0.12,
-        maxAlq: 125.376,
-    },
-    "D": {
-        value: 6101.06,
-        minValue: 3134.40,
-        aliquota: 0.14,
-        maxAlq: 415.3324,
-    },
-}
-const IRPF = {
-    "A": {
-        minValue: 0.0,
-        aliquota: 0.0,
-        maxValue: 1903.98,
-        parcDedu: 0.00,
-    },
-    "B": {
-        minValue: 1903.98,
-        aliquota: 0.075,
-        maxValue: 2826.65,
-        parcDedu: 142.80,
-    },
-    "C": {
-        minValue: 2826.65,
-        aliquota: 0.150,
-        maxValue: 3751.05,
-        parcDedu: 354.80,
-    },
-    "D": {
-        minValue: 3751.05,
-        aliquota: 0.225,
-        maxValue: 4664.05,
-        parcDedu: 636.13,
-    },
-    "E": {
-        minValue: 4664.05,
-        aliquota: 0.275,
-        maxValue: 100000000000000000000.00,
-        parcDedu: 869.36,
-    },
-}
+const inss = require('./INSS.json');
+const IRPF = require('./IRPF.json');
 function salaryMath(salary) {
     let match= false;
     let salaryObj ={};
@@ -70,10 +14,14 @@ function salaryMath(salary) {
 
     Object.keys(inss).forEach( key => {
         const { value, minValue, aliquota, maxAlq} =inss[key]
+        
         alqArray = [...alqArray, aliquota]
         vleArray = [...vleArray, value]
         maxValueArray = [...maxValueArray, maxAlq]
         if (salary <= value && salary > minValue) {
+            console.log(salary)
+            console.log(minValue)
+            console.log(aliquota)
             discINSS += (salary - minValue) * aliquota
             match = true
         }else if (!match) {
@@ -84,6 +32,7 @@ function salaryMath(salary) {
         barINSS: `${((discINSS/salary*100).toFixed(2))}%`,
         
     }
+    //Neste ponto, salaryObj calcula os valores =
     salaryObj = {
         A:{
             id: 'base_INSS',
@@ -104,8 +53,7 @@ function salaryMath(salary) {
     Object.keys(IRPF).forEach( key => {
         const { minValue, maxValue, aliquota, parcDedu } = IRPF[key];
         if ( ( salary - discINSS ) > minValue && ( salary - discINSS ) <= maxValue ) {
-            // console.log(aliquota)
-            // console.log(parcDedu)
+            
             discIRPF = (salary - discINSS) * aliquota - parcDedu
         }
     })
